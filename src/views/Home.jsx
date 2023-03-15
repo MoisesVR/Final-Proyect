@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 function Home() {
 
@@ -15,9 +14,6 @@ function Home() {
 
     return(
         <div>
-            <div>
-                <Navbar></Navbar>
-            </div>
             <div>
                 <h1> Energía y Salud en Movimiento </h1>
                 <p> Entrena en el mejor gimnasio de Latinoamerica y logra tus objetivos con equipamiento de última generación </p>

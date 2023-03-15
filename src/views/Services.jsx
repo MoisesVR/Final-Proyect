@@ -1,13 +1,8 @@
-import Navbar from "../components/Navbar";
 
 const Services = () => {
 
-
     return (
         <div>
-            <div>
-                <Navbar></Navbar>
-            </div>
             <div>
                 <h1> Servicios </h1>
             </div>

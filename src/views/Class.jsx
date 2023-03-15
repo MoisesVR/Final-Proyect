@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-import Navbar from "../components/Navbar";
-
 const Class = () => {
 
     const [data, setData] = useState([])
@@ -29,15 +27,12 @@ const Class = () => {
     return (
         <div>
             <div>
-                <Navbar></Navbar>
-            </div>
-            <div>
                 <h1> Nuestras Clases </h1>
             </div>
             {clases ?
                 <div>
                     {clases.map((clase) => {
-                        return(
+                        return (
                             <div>
                                 <h1>{clase.nombre}</h1>
                                 <img src={clase.img} alt="" />

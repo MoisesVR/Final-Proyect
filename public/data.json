@@ -5,24 +5,27 @@
             "nombre": "Moises",
             "correo": "moises@gmail.com",
             "direccion": "Avenida Siempre Viva",
-            "forma de pago": "Efectivo",
-            "tipo de usuario": "Admin"
+            "forma_de_pago": "Efectivo",
+            "tipo_de_usuario": "Admin",
+            "contraseña": "asdfg"
         },
         {
             "id": 2,
             "nombre": "Mateo",
             "correo": "mateo@gmail.com",
             "direccion": "Avenida Siempre Viva",
-            "forma de pago": "Efectivo",
-            "tipo de usuario": "Usuario"
+            "forma_de_pago": "Efectivo",
+            "tipo_de_usuario": "Usuario",
+            "contraseña": "gfasd"
         },
         {
             "id": 3,
             "nombre": "Jona",
             "correo": "jona@gmail.com",
             "direccion": "Avenida Simpre Viva",
-            "forma de pago": "Efectivo",
-            "tipo de usuario": "Profesor"
+            "forma_de_pago": "Efectivo",
+            "tipo_de_usuario": "Profesor",
+            "contraseña": "fghjk"
         }
     ],
     "class": [
@@ -54,21 +57,21 @@
     "plans": [
         {
             "id": 1,
-            "nombre": "anual",
+            "nombre": "Anual",
             "duracion": "12 Meses" ,
             "descripcion": "Membresía con duración de 12 meses con posibilidad de congelación, acceso sin limites todos los dias de vigencia de tu plan, acceso ilimitado a todas las clases dirigidas durante la vigencia del plan, evaluacion antropometrica con sistema inbody de ultima generacion, programa de entrenamiento enfocado a tus objetivos",
             "costo": 120000 
         },
         {
             "id": 2,
-            "nombre": "trimestral",
+            "nombre": "Trimestral",
             "duracion": "3 meses",
             "descripcion": "Membresía con duración de 3 meses con posibilidad de congelación, acceso sin limites todos los dias de vigencia de tu plan, acceso ilimitado a todas las clases dirigidas durante la vigencia del plan, evaluacion antropometrica con sistema inbody de ultima generacion, programa de entrenamiento enfocado a tus objetivos",
             "costo": 35000
         },
         {
             "id": 3,
-            "nombre": "semestral",
+            "nombre": "Semestral",
             "duracion": "6 meses",
             "descripcion": "Membresía con duración de 6 meses con posibilidad de congelación, acceso sin limites todos los dias de vigencia de tu plan, acceso ilimitado a todas las clases dirigidas durante la vigencia del plan, evaluacion antropometrica con sistema inbody de ultima generacion, programa de entrenamiento enfocado a tus objetivos",
             "costo": 70000

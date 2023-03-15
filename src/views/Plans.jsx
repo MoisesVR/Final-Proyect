@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
-
 const Plans = () => {
 
     const navigate = useNavigate();
@@ -36,22 +34,19 @@ const Plans = () => {
     return (
         <div>
             <div>
-                <Navbar></Navbar>
-            </div>
-            <div>
                 <h1> Nuestros Planes </h1>
             </div>
             {planes ?
                 <div>
                     {planes.map((plan) => {
-                        return(
-                        <div>
-                            <h1>{plan.nombre}</h1>
-                            <h5>{plan.duracion}</h5>
-                            <p>{plan.descripcion}</p>
-                            <h5>${plan.costo}</h5>
-                            <button onClick={goToRegister}> Contratar </button>
-                        </div>
+                        return (
+                            <div>
+                                <h1>{plan.nombre}</h1>
+                                <h5>{plan.duracion}</h5>
+                                <p>{plan.descripcion}</p>
+                                <h5>${plan.costo}</h5>
+                                <button onClick={goToRegister}> Contratar </button>
+                            </div>
                         );
                     })}
                 </div>
