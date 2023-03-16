@@ -1,42 +1,32 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { Card } from "react-bootstrap";
+
+import { DataContext } from "../context/contextApi";
 
 const Class = () => {
 
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        const getApi = async () => {
-            try {
-                const resp = await fetch("../data.json");
-                const data = await resp.json();
-                setData(data)
-            } catch (error) {
-                return (
-                    <div>
-                        <h1>Error al cargar la data</h1>
-                    </div>
-                )
-            }
-        }
-        getApi();
-
-    }, [])
-
+    const { data } = useContext( DataContext );
     const clases = data.class;
 
     return (
         <div>
             <div>
-                <h1> Nuestras Clases </h1>
+                <h1 className="text-center"> Nuestras Clases </h1>
             </div>
             {clases ?
                 <div>
                     {clases.map((clase) => {
                         return (
-                            <div>
-                                <h1>{clase.nombre}</h1>
-                                <img src={clase.img} alt="" />
-                                <p>{clase.descripcion}</p>
+                            <div style={{ display: "flex", padding: "1% "}}>
+                                <Card.Img variant="top" src={clase.img} alt="" style={{ width: "30%" }} />
+                                <Card.Body style={{ paddingLeft: "2%" }}>
+                                    <Card.Title>
+                                        {clase.nombre}
+                                    </Card.Title>
+                                    <Card.Text style={{ paddingTop: "2%" }}>
+                                        {clase.descripcion}
+                                    </Card.Text>
+                                </Card.Body>
                             </div>
                         );
                     })}

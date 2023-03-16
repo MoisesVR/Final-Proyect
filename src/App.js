@@ -9,10 +9,11 @@ import DashboardAdmin from "./views/DashboardAdmin";
 import DashboardUser from "./views/DashboardUser";
 import DashboardProfesor from "./views/Dashboard_profesor";
 import Navbar from "./components/Navbar";
+import { DataProvider } from "./context/contextApi";
 
 function App() {
   return (
-    <>
+    <DataProvider>
       <BrowserRouter>
 
         <Navbar />
@@ -29,7 +30,7 @@ function App() {
           <Route path="/Dashboard_profesor" element={< DashboardProfesor />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </DataProvider>
   );
 }
 

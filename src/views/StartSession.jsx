@@ -1,19 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../context/contextApi";
+import { Form, Button } from "react-bootstrap";
 
 function StartSession() {
 
+    const { data } = useContext(DataContext);
+
     const navigate = useNavigate();
 
-    const [data, setData] = useState([]);
     const [user, setUser] = useState([]);
     const [userFounding, setEmailFounding] = useState([]);
     const [pass, setPass] = useState([]);
     const [passFounding, setPassFounding] = useState([]);
-
-    const goToHome = () => {
-        navigate(`/`)
-    };
 
     const goToDashboard = () => {
         navigate(`/Dashboard`)
@@ -24,24 +23,6 @@ function StartSession() {
     const goToDashboardProfesor = () => {
         navigate(`/Dashboard_profesor`)
     }
-
-    useEffect(() => {
-        const getApi = async () => {
-            try {
-                const resp = await fetch("../data.json");
-                const data = await resp.json();
-                setData(data)
-            } catch (error) {
-                return (
-                    <div>
-                        <h1>Error al cargar la data</h1>
-                    </div>
-                )
-            }
-        }
-        getApi();
-
-    }, [passFounding])
 
     const info = data.users;
 
@@ -72,8 +53,7 @@ function StartSession() {
         event.preventDefault();
     }
 
-    const verificacion = () => {
-        console.log("dentro de la verificacion")
+    const verificacion = (e) => {
         if (userFounding.length === 0 && passFounding.length === 0) {
             alert("usuario o contraseña equivocada");
         }
@@ -82,17 +62,19 @@ function StartSession() {
     return (
         <div>
             {info ? <div>
-                <form>
-                    <div>
-                        <input type="text" value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
-                    </div>
-                    <div>
-                        <input type="password" value={user.pass} onChange={(e) => setPass({ ...pass, password: e.target.value })} />
-                    </div>
-                    <button onClick={compareEmail} >Iniciar Sesión</button>
-                </form>
-                <br />
-                <button onClick={goToHome}> Inicio </button>
+                <Form style={{ width: "70%", paddingLeft: "30%", paddingTop: "3%" }}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label> Email </Form.Label>
+                        <Form.Control type="email" placeholder="Ingresar Email" value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label> Contraseña </Form.Label>
+                        <Form.Control type="password" placeholder="Ingresar Contraseña" value={user.pass} onChange={(e) => setPass({ ...pass, password: e.target.value })} />
+                    </Form.Group>
+                    <Button variant="primary" onClick={compareEmail}>
+                        Iniciar Sesión
+                    </Button>
+                </Form>
             </div> : null}
         </div>
     );
