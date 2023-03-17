@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+ # Página Web para registro de ingreso Gimnasio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
