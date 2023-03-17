@@ -17,10 +17,9 @@ function Register() {
         const lengthPassword = user.password.length;
         const lengthDireccion = user.direccion.length;
         if (lengthNombre === 0 || lengthEmail === 0 || lengthPassword === 0 || lengthDireccion === 0) {
-            console.log("dentro")
             alert("Falta completar datos")
         } else {
-            console.log("Usuario registrado correctamente");
+            alert("Usuario registrado correctamente");
             goToStartSession();
         }
         e.preventDefault();

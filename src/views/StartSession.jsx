@@ -15,10 +15,10 @@ function StartSession() {
     const [passFounding, setPassFounding] = useState([]);
 
     const goToDashboard = () => {
-        navigate(`/Dashboard`)
+        navigate(`/Dashboard#Usuarios`)
     }
     const goToDashboardUser = () => {
-        navigate(`/Dashboard_user`)
+        navigate(`/Dashboard_user#MiPerfil#Ingresos`)
     }
     const goToDashboardProfesor = () => {
         navigate(`/Dashboard_profesor`)

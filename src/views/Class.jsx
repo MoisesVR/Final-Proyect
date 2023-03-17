@@ -22,7 +22,7 @@ const Class = () => {
                                 <Card.Body style={{ paddingLeft: "2%" }}>
                                     <Card.Title>
                                         {clase.nombre}
-                                    </Card.Title>
+                                    </Card.Title>   
                                     <Card.Text style={{ paddingTop: "2%" }}>
                                         {clase.descripcion}
                                     </Card.Text>

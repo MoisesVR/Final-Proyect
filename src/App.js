@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./views/Home";
 import Plans from "./views/Plans";
 import Services from "./views/Services";
@@ -8,7 +9,9 @@ import StartSession from "./views/StartSession";
 import DashboardAdmin from "./views/DashboardAdmin";
 import DashboardUser from "./views/DashboardUser";
 import DashboardProfesor from "./views/Dashboard_profesor";
+
 import Navbar from "./components/Navbar";
+
 import { DataProvider } from "./context/contextApi";
 
 function App() {
